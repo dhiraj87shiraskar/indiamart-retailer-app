@@ -1,0 +1,72 @@
+html {
+  font-size: 100%; /* 16px * 100 = 16px = 1rem*/
+  box-sizing: border-box; /* easer to manage boxes at padding border margin */
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Layout to split */
+.grid-container {
+  display: grid; /*Very responsive and flexible*/
+  grid-template-areas: /* it will speacify some placeholder for area by string and we can use it as a veribale or referance */
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr; /*specify column for container */
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #203040;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+}
+
+/* Common*/
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8000;
+}
+
+/*Header*/
+
+header a {
+  color: #ffffff;
+  padding: 1rem;
+}
+
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.center {
+  justify-content: center;
+}
